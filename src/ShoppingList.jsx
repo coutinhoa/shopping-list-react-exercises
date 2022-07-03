@@ -8,10 +8,10 @@ export const ShoppingList = () => {
   useEffect(() => {
     // here fetch the content of expenses.json file and put
     // the response into our expenses variable
-    fetch("./expenses.json")
+    fetch("/expenses.json")
       .then((response) => response.json())
       .then((response) => setExpenses(response));
-  });
+  }, []);
 
   return (
     <div className="shopping-list-container">
