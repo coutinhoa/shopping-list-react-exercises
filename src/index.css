@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/Caveat-Medium.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Caveat", "Comic Sans", cursive;
+  font-size: xx-large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/894ea471419495.5bc4f11430e67.jpg");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

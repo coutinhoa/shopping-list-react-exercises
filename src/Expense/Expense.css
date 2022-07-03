@@ -1,0 +1,21 @@
+.align-text-center {
+    text-align: center;
+}
+
+.expense-item {
+    border-top: 1px solid white;
+}
+
+.expense-item td {
+    padding: 10px 0;
+}
+
+.delete-action {
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+}
+
+.delete-action:hover {
+    color: orangered;
+}
