@@ -7,7 +7,7 @@ export const Expense = ({ item, updateQuantity, removeItemFromList }) => {
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    callMeToUpdateItemQuantity(item, e.target.value);
+    updateQuantity(item, e.target.value);
   };
 
   const deleteExpense = () => {

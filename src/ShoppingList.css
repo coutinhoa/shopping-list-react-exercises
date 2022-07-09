@@ -1,33 +1,41 @@
 .shopping-list-container {
-    background: rgba(255, 255, 255, 0.9);
-    width: 60%;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vh;
+  background: rgba(255, 255, 255, 0.9);
+  width: 60%;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-h2, h3 {
-    color: red;
+h2,
+h3 {
+  color: red;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 table th {
-    font-weight: 900;
-    font-size: 28px;
-    padding-bottom: 5px;
+  font-weight: 900;
+  font-size: 28px;
+  padding-bottom: 5px;
 }
 
 table th:first-child {
-    width: 60%;
-    text-align: left;
+  width: 60%;
+  text-align: left;
+}
+
+.new-item {
+  background-color: rgba(0, 0, 255, 0.317);
+  border-color: transparent;
+  cursor: pointer;
+  text-align: center;
 }
