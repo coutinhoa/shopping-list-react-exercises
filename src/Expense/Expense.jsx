@@ -5,6 +5,7 @@ import { Select } from "../components/Select/Select";
 export const Expense = ({
   item,
   callMeToUpdateItemQuantity,
+  callMeToRemoveItemFromList,
 }) => {
   const quantityOptions = [1, 2, 3, 4, 5, 6];
 
@@ -15,6 +16,7 @@ export const Expense = ({
 
   const deleteExpense = () => {
     console.log(`deleting item ${item.name}`);
+    callMeToRemoveItemFromList(item);
   };
 
   return (

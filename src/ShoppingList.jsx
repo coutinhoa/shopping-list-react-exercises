@@ -25,6 +25,10 @@ export const ShoppingList = () => {
 
     setExpenses(updatedExpenses);
   };
+  const removeItem = (item) => {
+    const newList = expenses.filter((i) => i !== item);
+    setExpenses(newList);
+  };
   const sumExpenses = (array) => {
     let result = 0;
     array.forEach((element) => (result += element.price * element.quantity));
@@ -50,6 +54,7 @@ export const ShoppingList = () => {
               key={item.id}
               item={item}
               callMeToUpdateItemQuantity={updateItemQuantity}
+              callMeToRemoveItemFromList={removeItem}
             />
           ))}
         </tbody>
