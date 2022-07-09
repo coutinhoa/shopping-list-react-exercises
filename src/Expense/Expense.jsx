@@ -2,11 +2,7 @@ import React from "react";
 import "./Expense.css";
 import { Select } from "../components/Select/Select";
 
-export const Expense = ({
-  item,
-  callMeToUpdateItemQuantity,
-  callMeToRemoveItemFromList,
-}) => {
+export const Expense = ({ item, updateQuantity, removeItemFromList }) => {
   const quantityOptions = [1, 2, 3, 4, 5, 6];
 
   const handleChange = (e) => {
@@ -16,7 +12,7 @@ export const Expense = ({
 
   const deleteExpense = () => {
     console.log(`deleting item ${item.name}`);
-    callMeToRemoveItemFromList(item);
+    removeItemFromList(item);
   };
 
   return (

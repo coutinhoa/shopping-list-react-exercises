@@ -14,6 +14,11 @@ export const ShoppingList = () => {
   }, []);
 
   const updateItemQuantity = (item, quantity) => {
+  const removeItem = (item) => {
+    console.log(item);
+    fetch(`http://localhost:3002/expenses/${item.id}`, {
+      method: "DELETE",
+    }).then(() => fetchExpenses());
     const updatedItem = {
       ...item,
       quantity: quantity,
@@ -25,9 +30,6 @@ export const ShoppingList = () => {
 
     setExpenses(updatedExpenses);
   };
-  const removeItem = (item) => {
-    const newList = expenses.filter((i) => i !== item);
-    setExpenses(newList);
   };
   const sumExpenses = (array) => {
     let result = 0;
@@ -54,7 +56,7 @@ export const ShoppingList = () => {
               key={item.id}
               item={item}
               callMeToUpdateItemQuantity={updateItemQuantity}
-              callMeToRemoveItemFromList={removeItem}
+              removeItemFromList={removeItem}
             />
           ))}
         </tbody>
