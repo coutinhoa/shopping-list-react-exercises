@@ -8,7 +8,7 @@ export const ShoppingList = () => {
   useEffect(() => {
     // here fetch the content of expenses.json file and put
     // the response into our expenses variable
-    fetch("/expenses.json")
+    fetch("http://localhost:3002/expenses")
       .then((response) => response.json())
       .then((response) => setExpenses(response));
   }, []);
