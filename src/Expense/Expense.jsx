@@ -24,7 +24,9 @@ export const Expense = ({ item }) => {
           onChange={handleChange}
         />
       </td>
-      <td className="align-text-center">{item.price} €</td>
+      <td className="align-text-center">
+        {(item.price.toFixed(2) * item.quantity).toFixed(2)} €
+      </td>
       <td className="delete-action" onClick={deleteExpense}>
         X
       </td>
