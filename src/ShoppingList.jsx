@@ -13,6 +13,18 @@ export const ShoppingList = () => {
       .then((response) => setExpenses(response));
   }, []);
 
+  const updateItemQuantity = (item, quantity) => {
+    const updatedItem = {
+      ...item,
+      quantity: quantity,
+    };
+
+    const updatedExpenses = expenses.map((element) =>
+      element === item ? updatedItem : element
+    );
+
+    setExpenses(updatedExpenses);
+  };
   const sumExpenses = (array) => {
     let result = 0;
     array.forEach((element) => (result += element.price * element.quantity));
@@ -34,7 +46,11 @@ export const ShoppingList = () => {
         </thead>
         <tbody>
           {expenses.map((item) => (
-            <Expense key={item.id} item={item} />
+            <Expense
+              key={item.id}
+              item={item}
+              callMeToUpdateItemQuantity={updateItemQuantity}
+            />
           ))}
         </tbody>
       </table>

@@ -2,11 +2,15 @@ import React from "react";
 import "./Expense.css";
 import { Select } from "../components/Select/Select";
 
-export const Expense = ({ item }) => {
+export const Expense = ({
+  item,
+  callMeToUpdateItemQuantity,
+}) => {
   const quantityOptions = [1, 2, 3, 4, 5, 6];
 
   const handleChange = (e) => {
     console.log(e.target.value);
+    callMeToUpdateItemQuantity(item, e.target.value);
   };
 
   const deleteExpense = () => {
