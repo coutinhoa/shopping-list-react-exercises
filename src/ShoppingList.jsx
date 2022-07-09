@@ -13,6 +13,13 @@ export const ShoppingList = () => {
       .then((response) => setExpenses(response));
   }, []);
 
+  const sumExpenses = (array) => {
+    let result = 0;
+    array.forEach((element) => (result += element.price * element.quantity));
+    return result.toFixed(2);
+  };
+
+  const totalAmount = sumExpenses(expenses);
   return (
     <div className="shopping-list-container">
       <h2>My Shopping List</h2>
@@ -31,7 +38,7 @@ export const ShoppingList = () => {
           ))}
         </tbody>
       </table>
-      <h3>Total amount: 1.00 €</h3>
+      <h3>Total amount: {totalAmount}€</h3>
     </div>
   );
 };
