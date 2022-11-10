@@ -15,7 +15,7 @@ Feel free to make suggetions/improvements and even tag me if you want a code rev
 1. Clone this project to your computer with:
 
 ```sh
-git clone https://github.com/jvaladas/shopping-list-react-exercises.git
+git clone https://github.com/coutinhoa/shopping-list-react-exercises.git
 ```
 
 2. Move to the project root directory and install packages:
@@ -23,12 +23,6 @@ git clone https://github.com/jvaladas/shopping-list-react-exercises.git
 ```sh
 cd shopping-list-react-exercises
 yarn install
-```
-
-3. Install json-server
-
-```sh
-yarn add -g json-server
 ```
 
 ## Usage
@@ -39,14 +33,7 @@ yarn add -g json-server
 yarn run dev
 ```
 
-2. Run the json-server API in a new terminal window:
-
-```sh
-cd server
-json-server .\expenses.json --port 3002
-```
-
-3. Access the application through the browser at http://localhost:3000 and you should see the following:
+2. Access the application through the browser at http://localhost:3000 and you should see the following:
 
 ![Screenshot 2022-07-03 at 12 52 21](https://user-images.githubusercontent.com/55699538/177037100-9b10ca47-00a4-472a-a5d4-3f37d39fb2fb.png)
 
