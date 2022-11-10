@@ -25,6 +25,12 @@ cd shopping-list-react-exercises
 yarn install
 ```
 
+3. Install json-server
+
+```sh
+yarn add -g json-server
+```
+
 ## Usage
 
 1. Run the web application in the terminal:
@@ -33,7 +39,14 @@ yarn install
 yarn run dev
 ```
 
-2. Access the application through the browser at http://localhost:3000 and you should see the following:
+2. Run the json-server API in a new terminal window:
+
+```sh
+cd server
+json-server .\expenses.json --port 3002
+```
+
+3. Access the application through the browser at http://localhost:3000 and you should see the following:
 
 ![Screenshot 2022-07-03 at 12 52 21](https://user-images.githubusercontent.com/55699538/177037100-9b10ca47-00a4-472a-a5d4-3f37d39fb2fb.png)
 
